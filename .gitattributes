@@ -1,0 +1,59 @@
+# Normalize line endings for all text files
+* text=auto
+
+# Source code
+*.py text diff=python
+*.js text
+*.ts text
+*.tsx text
+*.json text
+*.yaml text
+*.yml text
+*.toml text
+
+# Shell scripts (must use LF)
+*.sh text eol=lf
+
+# Documentation
+*.md text
+*.txt text
+
+# Configuration files
+.gitignore text
+.gitattributes text
+Dockerfile text
+requirements*.txt text
+pyproject.toml text
+LICENSE text
+README* text
+
+# Web files
+*.html text
+*.css text
+
+# Graphics (binary)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+
+# Archives (binary)
+*.zip binary
+*.tar binary
+*.gz binary
+
+# Python compiled (binary)
+*.pyc binary
+*.pyo binary
+*.whl binary
+
+# System libraries (binary)
+*.so binary
+*.dll binary
+*.dylib binary
+
+# Documents (binary)
+*.pdf binary
+*.docx binary

@@ -1,0 +1,38 @@
+{
+  "_comment": "Sample browser-tab export — hand-picked PUBLIC career pages so stage 1 runs out of the box. Replace with your own export saved as 01-ingest/tabs.json (gitignored) to use your real tabs.",
+  "groups": [
+    {
+      "name": "Company career pages",
+      "tabs": [
+        { "url": "https://jobs.ashbyhq.com/ramp", "title": "Ramp — Open Roles" },
+        { "url": "https://jobs.ashbyhq.com/linear", "title": "Linear — Careers" },
+        { "url": "https://boards.greenhouse.io/airbnb", "title": "Airbnb Careers" },
+        { "url": "https://job-boards.greenhouse.io/figma", "title": "Figma — Jobs" },
+        { "url": "https://jobs.lever.co/voiceflow", "title": "Voiceflow — Careers" },
+        { "url": "https://careers.google.com/jobs/results/", "title": "Google Careers" }
+      ]
+    },
+    {
+      "name": "Aggregators",
+      "tabs": [
+        { "url": "https://www.ycombinator.com/jobs", "title": "Work at a Startup — Y Combinator" },
+        { "url": "https://remoteok.com/remote-dev-jobs", "title": "Remote Developer Jobs — RemoteOK" },
+        { "url": "https://wellfound.com/jobs", "title": "Startup Jobs — Wellfound" }
+      ]
+    },
+    {
+      "name": "Specific postings",
+      "tabs": [
+        { "url": "https://jobs.ashbyhq.com/ramp/data-engineer", "title": "Data Engineer — Ramp" },
+        { "url": "https://boards.greenhouse.io/airbnb/jobs/0000000", "title": "Backend Engineer — Airbnb" }
+      ]
+    },
+    {
+      "name": "Not job-related (should be filtered out)",
+      "tabs": [
+        { "url": "https://news.ycombinator.com/item?id=1", "title": "Hacker News" },
+        { "url": "https://github.com/torvalds/linux", "title": "torvalds/linux" }
+      ]
+    }
+  ]
+}

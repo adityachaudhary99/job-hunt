@@ -41,7 +41,7 @@ Files like `*_companies.json`, `*.csv`, `*.xlsx`, `tracker.md`, and your `tabs.j
 
 ## Hand-off to a downstream evaluator (optional)
 
-The spreadsheet isn't the only output. **Stage 07** exports the Shortlist as an *idempotent* Markdown task list — `- [ ] <url> | <company> | <role> | score=X.X` under a `## Pending` heading — that you can pipe into a downstream per-job evaluator or agent. Re-runs skip URLs already seen (in `## Pending` or `## Processed`), so it's safe to run on a schedule.
+The spreadsheet isn't the only output. **Stage 07** exports the Shortlist as an *idempotent* Markdown task list — `- [ ] <url> | <company> | <role> | score=X.X` under a `## Pending` heading. It's built to drop straight into **[career-ops](https://github.com/santifer/career-ops)** (an AI-powered job-search system on Claude Code) as a discovery front-end: **job-hunt finds and ranks the openings; career-ops evaluates them and tailors applications.** Re-runs skip URLs already seen (in `## Pending` or `## Processed`), so it's safe to run on a schedule against any downstream evaluator or agent.
 
 ```bash
 # append up to 30 new high-score rows to the hand-off file
@@ -52,7 +52,7 @@ HANDOFF_DIR=/path/to/your/evaluator python 07-bridge/bridge_to_evaluator.py
 python 07-bridge/bridge_to_evaluator.py --out ./bridge-out
 ```
 
-Target dir resolution: `$HANDOFF_DIR` → `--out` → a local `./bridge-out/`. The hand-off is plain Markdown, so you can point it at any downstream evaluator or agent.
+Target dir resolution: `$HANDOFF_DIR` → `--out` → a local `./bridge-out/`. To feed [career-ops](https://github.com/santifer/career-ops), point `HANDOFF_DIR` at your career-ops checkout and it picks up `data/pipeline.md`. The hand-off is plain Markdown, so any other downstream tool works too.
 
 ## Workbook sheets
 
